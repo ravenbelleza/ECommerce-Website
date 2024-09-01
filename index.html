@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"/>
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="/images/logo-shtl2.png" />
+    <title>Racquet League</title>
+  </head>
+  <body>
+    <div class="scroll-watcher"></div>
+    <header class="header">
+      <div class="nav">
+
+        <a href="#" class="logo"  data-aos="fade-right">
+          <img
+            src="/images/logo-shtl2.png"
+            title="Racket League"
+            style="
+              height: 50px;
+              width: 50px;
+            "
+        /></a>
+
+        <nav>
+          <ul>
+            <li  data-aos="fade-down">
+              <a href="#">Home</a>
+              <a href="#arrival">New</a>
+              <a href="#products">Products</a>
+              <a href="#news">News</a>
+              <a href="/html/aboutus.html">About</a>
+            </li>
+          </ul>
+
+          <div class="nav-icon"  data-aos="fade-left">
+            <span class="cart-icon-container" onclick="togglePopup()">
+              <i class="bi bi-cart2" id="cartIcon"></i>
+              <span id="cartItemCount" class="cart-notification">0</span>
+            </span>
+            <span><i class="bi bi-person-circle" title="Sign In" onclick="signIn()"></i></span>
+            </span>
+          </div>
+        </nav>
+        <i class="bi bi-list burger_icon"></i>
+      </div>
+    </header>
+    
+    <main class="container hero">
+      <div class="clr-one"></div>
+      <div class="clr-two"></div>
+      <div class="wrapper">
+        <div class="col col-text" data-aos="fade-up-right">
+          <h1 class="heading-one">
+            Best rackets<br />collection<br /><span>for you</span>
+          </h1>
+
+          <p class="sub-text">
+            We Create And Deliver The Highest Quality Products <br> To Customers
+            Across The Globe. <br />
+            But through 56 Years of Experience In The Industy
+          </p>
+
+          <button class="btn btn-hero" onclick="preOrderTab()">Pre-order Now</button>
+        </div>
+        
+        <div class="col col-img">
+          <figure data-aos="fade-up-left">
+            <img
+              src="/images/pngwing.com.png"
+              style="border: none; border-radius: 50px"
+            />
+          </figure>
+          <div class="hero-img-off" data-aos="zoom-in-up">
+            <h3 class="heading-three">Get up to 75% OFF</h3>
+
+            <p>
+              Get the lightning stung now! NANOFLARE 1000 Z. A
+              pursuing sharp shots and high swing speed <br> agility.
+              Full Carbon 26-36LBS.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+
+
+
+
+    
+    <div id="cartPopup" class="cart-popup">
+      <div class="cart-content">
+          <span class="close" onclick="togglePopup()">&times;</span>
+          <h2>Your Cart</h2> <hr>
+          <div id="cartItems" class="cart-items"></div>
+          <hr>
+          <div id="totalPrice">Total Price: PHP 0.00</div>
+          <div class="foot">
+              <div id="button">
+                  <button onclick="checkout()">Checkout</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--  -->
+    <section class="container arrival" id="arrival">
+      <div class="section-heading">
+        <div class="heading" data-aos="fade-right">
+          <h2 class="heading-two">New <span>Arrivals</span></h2>
+
+          <p class="sub-heading">Our New collections</p>
+        </div>
+        <button class="btn" onclick="seeMoreProducts()" data-aos="fade-up">See all</button>
+      </div>
+      <div class="wrapper">
+        
+        <div class="col" data-aos="zoom-in">
+          <figure>
+            <img src="/images/ARCSABER 11 PRO.webp" />
+          </figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">5.5</span>
+            </p>
+            <h3 class="heading-three">ARCSABER 11 PRO</h3>
+            <p class="sub-heading">Reduces vibrations traveling down the shaft for improved comfort.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 35,874.00</p>
+              <button class="rack-btn btn" onclick="addToCart('ARCSABER 11 PRO', 'PHP 35,874.00')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===  -->
+
+        <div class="col" data-aos="zoom-in">
+          <figure>
+            <img src="/images/Astrox 88 S Pro.webp" />
+          </figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">5.0</span>
+            </p>
+            <h3 class="heading-three">ASTROX 88 S PRO</h3>
+            <p class="sub-heading">Lightweight fibers that withstand immense forces while absorbing unwanted shock and vibrations.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 16,776.50</p>
+              <button class="rack-btn btn" onclick="addToCart('ASTROX 88 S PRO', 'PHP 16,776.50')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col" data-aos="zoom-in">
+          <figure>
+            <img src="/images/Nanoflare 1000 Z.webp" />
+          </figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">5.5</span>
+            </p>
+            <h3 class="heading-three">NANOFLARE 1000 Z</h3>
+            <p class="sub-heading">An enhanced graphite based on unique NANOSCIENCE technology for a firm shuttle hold creating maximum repulsion.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 20,305.35</p>
+              <button class="rack-btn btn" onclick="addToCart('NANOFLARE 1000 Z', 'PHP 20,305.35')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <!-- === -->
+      </div>
+    </section>
+    <!-- ===== About us ===== -->
+    <section class="about container" id="news">
+      <div class="clr-one"></div>
+      <div class="clr-two"></div>
+      <div class="wrapper">
+        <div class="col-img col">
+
+          <!-- <div class="get-off">
+            <h4>Get up to 45% OFF</h4>
+            <p class="off-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+          </div> -->
+
+          <figure data-aos="fade-right">
+            <img src="/images/yonex-nanoflare-ads.jpg" style="border: none; border-radius: 50px;">
+          </figure>
+        </div>
+        <div class="col-text col" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+          <p class="sub-heading">About Us</p>
+          <h2 class="heading-two">
+            We provide a <br> high <br />quality <br> <span>Rackets</span> <br> and
+            <br> <span>more.</span>
+          </h2>
+          <p class="about-text">
+            <br>
+            Unleash the speed with our December "String & Win" contest, where
+            two winners will score the record-breaking Yonex Nanoflare 1000z rackets,
+            as wielded by badminton champions who smashed their way into the
+            <span style="color: rgba(255, 179, 0, 1);">GUINNESS WORLD RECORDS!</span> 
+            <br>
+            <br>
+            YONEX NANOFLARE 1000Z Play <span style="color: gold;">LIGHTNING YELLOW</span> <br>
+            Pre-Stung, 40% OFF.
+          </p>
+          <button class="btn" onclick="readMoreTab()">Read More</button>
+        </div>
+      </div>
+    </section>
+    <!-- ===== New Collection ===== -->
+    <section class="container collection" id="products">      
+      <!-- ===== section header ===== -->
+      <div class="section-heading" id="see">
+        <div class="heading" data-aos="fade-right">
+          <p class="sub-heading">Products</p>
+          <h2 class="heading-two">High Quality Inventions</h2>
+        </div>
+        <div class="btn-section" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine">
+          <button class="btn-col btn" data-btn="all">All</button>
+          <button class="btn-col" data-btn="rackets">Rackets</button>
+          <button class="btn-col" data-btn="shoes">Shoes</button>
+          <button class="btn-col" data-btn="jersey">Jersey</button>
+        </div>
+      </div>
+      <!-- ===== wrapper & col ===== -->
+      <div class="grid-wrapper">
+
+        <div class="col- collection-item" data-item="rackets">
+          <figure><img src="/images/nanoflare100z_poster_ads.png" alt="" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">5.5</span>
+            </p>
+            <h3 class="heading-three">NANOFLARE 1000 Z</h3>
+            <p class="sub-heading">An enhanced graphite based on unique NANOSCIENCE technology for a firm shuttle hold creating maximum repulsion.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 20,305.35</p>
+              <button class="rack-btn btn" onclick="addToCart('NANOFLARE 1000 Z', 'PHP 20,305.35')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="rackets">
+          <figure><img src="/images/astrox88.jpg" alt="" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">5.0</span>
+            </p>
+            <h3 class="heading-three">ASTROX 88 S PRO</h3>
+            <p class="sub-heading">Lightweight fibers that withstand immense forces while absorbing unwanted shock and vibrations.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 16,776.50</p>
+              <button class="rack-btn btn" onclick="addToCart('ASTROX 88 S PRO', 'PHP 16,776.50')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="shoes">
+          <figure><img src="/images/black.jpg" alt="Black shoe" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">NEW</span>
+            </p>
+            <h3 class="heading-three">POWER CUSHION 88</h3>
+            <p class="sub-heading">The new POWER CUSHION 88 DIAL utilizes the single-dial BOA® Fit System, enabling players to make one-handed adjustments at a millimeter level to achieve their desired fit.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 30,000.00</p>
+              <button class="rack-btn btn" onclick="addToCart('POWER CUSHION 88', 'PHP 30,000.00')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="shoes">
+          <figure><img src="/images/cyan.jpg" alt="Blue shoe" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">4.5</span>
+            </p>
+            <h3 class="heading-three">POWER CUSHION ECLIPSION 5 MEN</h3>
+            <p class="sub-heading">A raw egg can be dropped from 12 meters above the POWER CUSHION+ mat, rebounding to a height of 6 meters without breaking.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 25,000.00</p>
+              <button class="rack-btn btn" onclick="addToCart('POWER CUSHION ECLIPSION 5 MEN', 'PHP 25,000.00')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="shoes">
+          <figure><img src="/images/red.jpg" alt="Red shoe 283x283" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">4.1</span>
+            </p>
+            <h3 class="heading-three">POWER CUSHION COMFORT Z MEN</h3>
+            <p class="sub-heading">A lightweight, impact-absorbing material developed independently by Yonex which quickly returns to its original shape after receiving a shock load, converting the shock energy into power for fast and light footwork.</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 24,900.50</p>
+              <button class="rack-btn btn" onclick="addToCart('POWER CUSHION COMFORT Z MEN', 'PHP 24,900.50')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="jersey">
+          <figure><img src="/images//crystal.jpg" alt="" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">4.1</span>
+            </p>
+            <h3 class="heading-three">MEN'S CREW NECK<br> SHIRT</h3>
+            <p class="sub-heading">Crystal Blue</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 2,319.74</p>
+              <button class="rack-btn btn" onclick="addToCart('Crystal Blue Shirt', 'PHP 2,319.74')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="jersey">
+          <figure><img src="/images/white black.jpg" alt="" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">4.1</span>
+            </p>
+            <h3 class="heading-three">MEN'S CREW NECK<br> SHIRT</h3>
+            <p class="sub-heading">White Black</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 1,159.87</p>
+              <button class="rack-btn btn" onclick="addToCart('White Black Shirt', 'PHP 1,159.87')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col- collection-item" data-item="jersey">
+          <figure><img src="/images/night sky.jpg" alt="" /></figure>
+          <div class="col-body">
+            <p class="rating-icon">
+              <i class="bi bi-star-fill"></i>
+              <span class="rating-num">4.1</span>
+            </p>
+            <h3 class="heading-three">MEN'S T-Shirt</h3>
+            <p class="sub-heading">Night Sky</p>
+            <div class="col-footer">
+              <p class="shoe-price">PHP 1,159.87</p>
+              <button class="rack-btn btn" onclick="addToCart('Night Sky Shirt', 'PHP 1,159.87')">Buy Now</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="seeMoreProducts">
+        <button class="btn-col btn btn-all" onclick="seeMoreProducts()">See More</button>
+      </div>
+    </section>
+
+    <!-- ===== section news update ===== -->
+
+    <section class="container subscribe" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+      <div class="clr-two"></div>
+      <div class="wrapper">
+        <h2 class="heading-two">subscribe for the latest updates</h2>
+        <form>
+          <input
+            type="email"
+            class="email"
+            placeholder="racket.league@gmail.com"/>
+          <button class="btn">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== footer ===== -->
+    <footer class="footer-container">
+      <div id="footer-line"></div>
+      <div class="wrapper">
+        <div class="col">
+          <a href="index.html" class="logo">
+            <img
+              src="/images/logo-shtl2.png"
+              title="Racket League"
+              style="
+                height: 60px;
+                width: 60px;"/>
+              <p class="about-website">Thank You for visiting! <br> All rights reserved 2024 © <br>Racket League / 2012-2024 YONEX Co., Ltd.</p>
+        </div>
+
+        <div class="col">
+          <h4>Quick Links</h4>
+          <a href="#">Home</a>
+          <a href="/html/aboutus.html#">About</a>
+          <a href="#arrival">New Arrivals</a>
+          <a href="#products">Products</a>
+        </div>
+
+        <div class="col">
+          <h4>Contact Us</h4>
+
+          <p>
+            <i class="bi bi-envelope-at-fill" title="Email"></i>
+          </p>
+          <p>
+            <i class="bi bi-facebook" title="Facebook"></i>
+          </p>
+          <p>
+            <i class="bi bi-twitter-x" title="Twitter"></i>
+          </p>
+          <p>
+            <i class="bi bi-youtube" title="Youtube"></i>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="/colors.css">
+    <link rel="icon" href="/images/logo-shtl2.png">
+    <link rel="stylesheet" href="/css/preorder.css">
+    <title>Pre Order Now</title>
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <a href="index.html" class="logo">
+                <a href="/index.html" class="back" data-aos="fade-right">
+                    <i class="bi bi-box-arrow-in-left arr" title="Back"></i>
+                </a>
+            </a>
+        
+            <nav data-aos="fade-down">
+                <ul>
+                    <li>
+                        <a href="/index.html">Home</a>
+                        <a href="/index.html#arrival">New</a>
+                        <a href="/index.html#products">Products</a>
+                        <a href="/index.html#news">News</a>
+                        <a href="/html/aboutus.html">About</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    </main>
+    <div class="clr-one"></div>
+    <div class="clr-two"></div>
+    <section class="payment-section">
+        <div class="container">
+            <div class="payment-wrapper">
+
+                <div class="payment-left" data-aos="fade-up-right">
+                    <div class="payment-header">
+                        <div class="payment-header-icon">
+                            <img src="https://cdn-icons-png.flaticon.com/512/8009/8009672.png " width="40" height="40" class="img-small">
+                        </div>
+                        <div class="payment-header-title">Order Summary</div>
+                        <p class="payment-header-description">Pre order now for maximum discount.</p>
+                    </div>
+                    <div class="payment-content">
+                        <div class="payment-body">
+                            <div class="payment-plan">
+                                <div class="payment-plan-type">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/8009/8009672.png " width="30" height="30" class="img-small">
+                                </div>
+                                <div class="payment-plan-info">
+                                    <div class="payment-plan-info-name">NANOFLARE 1000 Z</div>
+                                    <div class="payment-plan-info-price">PHP 20,305.35</div>
+                                </div>
+                                <a href="#" class="payment-plan-change"></a>
+                            </div>
+                            <div class="payment-summary">
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Discount 75% Off</div>
+                                    <div class="payment-summary-price">₱ 15,229.01</div>
+                                </div>
+                                <div class="payment-summary-item">
+                                    <div class="payment-summary-name">Arrival Fee</div>
+                                    <div class="payment-summary-price">₱ 100</div>
+                                </div>
+                                <div class="payment-summary-divider"></div>
+                                <div class="payment-summary-item payment-summary-total">
+                                    <div class="payment-summary-name">Total</div>
+                                    <div class="payment-summary-price">₱ 15,329.01</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="payment-right" data-aos="fade-up-left">
+                    <form action="" class="payment-form">
+                        <h1 class="payment-title">Payment Details</h1>
+                        <div class="payment-method">
+                            <input type="radio" name="payment-method" id="method-1" checked>
+                            <label for="method-1" class="payment-method-item">
+                                <img src="/images/visa.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-2">
+                            <label for="method-2" class="payment-method-item">
+                                <img src="/images/mastercard.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-3">
+                            <label for="method-3" class="payment-method-item">
+                                <img src="/images/paypal.png" alt="">
+                            </label>
+                            <input type="radio" name="payment-method" id="method-4">
+                            <label for="method-4" class="payment-method-item">
+                                <img src="/images/stripe.png" alt="">
+                            </label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="email" placeholder=" " class="payment-form-control" id="email">
+                            <label for="email" class="payment-form-label payment-form-label-required">Email Address</label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="adress" placeholder=" " class="payment-form-control" id="adress">
+                            <label for="adress" class="payment-form-label payment-form-label-required">Address</label>
+                        </div>
+                        <div class="payment-form-group">
+                            <input type="text" placeholder=" " class="payment-form-control" id="card-number">
+                            <label for="card-number" class="payment-form-label payment-form-label-required">Card Number</label>
+                        </div>
+                        <div class="payment-form-group-flex">
+                            <div class="payment-form-group">
+                                <input type="date" placeholder=" " class="payment-form-control" id="expiry-date">
+                                <label for="expiry-date" class="payment-form-label payment-form-label-required">Expiry Date</label>
+                            </div>
+                            <div class="payment-form-group">
+                                <input type="text" placeholder=" " class="payment-form-control" id="cvv">
+                                <label for="cvv" class="payment-form-label payment-form-label-required">CVV</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="payment-form-submit-button"><i class="ri-wallet-line"></i> Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

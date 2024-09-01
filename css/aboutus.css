@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+  -webkit-user-drag: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+li {
+  list-style-type: none;
+  text-transform: capitalize;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  font-family: "Poppins";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--primary-clr);
+}
+p,
+i {
+  color: var(--primary-clr);
+}
+body {
+  background-color: rgb(13, 13, 13);
+  overflow-x: hidden;
+}
+/* custom scrollbar */
+.scroll-watcher {
+  height: 2px;
+  position: fixed;
+  display: block;
+  top: 0;
+  z-index: 9999;
+  opacity: 1;
+  background-image: var(--gra-yellow);
+  width: 100%;
+  scale: 0 1;
+  animation: scroll-watcher ease-in;
+  animation-timeline: scroll();
+}
+@keyframes scroll-watcher {
+  to {
+    scale: 1 1;
+  }
+}
+
+/* ===== Variables ===== */
+:root {
+  /* Padding */
+  --p-xm: 4px;
+  --p-sm: 10px 14px;
+  --p-md: 12px 16px;
+  --p-lg: 16px 24px;
+  --con-pad: 60px 40px;
+  --sec-head-pad: 44px 40px;
+
+  /* Margin */
+  --m-xm: 4px 0;
+  --m-sm: 8px 0;
+  --m-md: 12px 0;
+  --m-t-b: 10px 0;
+  --m-t-b-md: 20px 0;
+
+  /* Colors */
+  --primary-clr: #fff;
+  --secondary-clr: #e8e4c9;
+  --darkk-clr: #29272d;
+  --yellow: #fcd667;
+  --gold: rgba(255, 179, 0, 1);
+  --b-violet: rgba(98, 103, 255, 1);
+  --green: #16832e;
+
+  /* Gradient Color */
+  --gra-white: linear-gradient(45deg, #dedede, #ffffff);
+  --gra-yellow: linear-gradient(
+    45deg,
+    rgba(255, 179, 0, 1),
+    rgba(252, 214, 103, 1)
+  );
+  --gra-bgreen: linear-gradient(
+    45deg,
+    rgba(98, 103, 255, 1),
+    rgba(22, 131, 46, 255)
+  );
+
+  /* Font size */
+  --font-sm: 0.8rem;
+  --font-nr: 1rem;
+  --font-md: 1.2rem;
+
+  /* Border radius */
+  --border-radius-full: 50%;
+  --section-rad: 12px;
+  --btn-radius: 4px;
+  --card-rad: 8px;
+
+  /* Transition */
+  --transition-one: all 0.25s ease;
+  --transition-two: all 0.5s linear;
+}
+
+/* -- background blur -- */
+.clr-one {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  top: -250px;
+  left: -400px;
+  background-color: #fcd667;
+  opacity: 0.7;
+  filter: blur(150px);
+  border-radius: var(--border-radius-full);
+  z-index: -9999;
+}
+
+.clr-two {
+  width: 500px;
+  height: 500px;
+  background-color: #fcd667;
+  position: absolute;
+  top: 300px;
+  left: 80%;
+  border-radius: var(--border-radius-full);
+  opacity: 0.8;
+  filter: blur(200px);
+  z-index: -9999;
+}
+/* header */
+header {
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 5px 5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+header .nav {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .nav .logo {
+  display: flex;
+  position: relative;
+  width: 5.5%;
+}
+
+.nav nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+.nav ul {
+  display: flex;
+  width: 32%;
+}
+.nav nav li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  margin-left: 100%;
+  transition: var(--transition-one);
+}
+.nav nav a:hover {
+  color: var(--gold);
+  transition: var(--transition-one);
+}
+.nav .nav-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+}
+.person {
+  color: var(--primary-clr);
+  transition: var(--transition-one);
+  font-size: 19.2px;
+}
+.person:hover {
+  color: var(--gold);
+  transition: var(--transition-one);
+}
+.arr {
+  color: var(--primary-clr);
+  transition: var(--transition-one);
+  font-size: 25.6px;
+}
+.arr:hover {
+  color: var(--gold);
+  transition: var(--transition-one);
+}
+
+/* container pad */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  padding: var(--con-pad);
+  width: 100%;
+}
+.wrapper {
+  position: relative;
+  width: 1280px;
+}
+.col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+figure {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+figure img {
+  filter: drop-shadow(0 0 10px rgba(255, 217, 0, 0.2));
+}
+
+.purpose {
+  display: block;
+  height: 250px;
+}
+.purpose .header-two {
+  font-size: 2rem;
+}
+.purpose .sub-text {
+  font-size: 1rem;
+  margin-top: 40px;
+  text-align: justify;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.mission {
+  display: block;
+  height: 250px;
+}
+.mission .header-two {
+  font-size: 2rem;
+}
+.mission .sub-text {
+  font-size: 1rem;
+  margin-top: 40px;
+  text-align: justify;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+#line::before {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 60px;
+  background-color: var(--gold);
+  margin-top: 10px;
+}
+#line::after {
+  content: "";
+  width: calc(100% - 40px);
+  position: relative;
+  display: block;
+  top: -3px;
+  width: 20%;
+  height: 3px;
+  z-index: -1;
+  background-color: var(--darkk-clr);
+}
+
+/* footer */
+footer .footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer-line::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--darkk-clr);
+}
+footer .wrapper {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+.wrapper .col {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+footer .wrapper .col {
+  line-height: 40px;
+}
+.col a:hover {
+  color: var(--gold);
+}
+.col i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.col i:hover {
+  color: var(--gold);
+}
+
+.col .about-website {
+  margin: 10px;
+}
